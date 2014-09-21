@@ -28,8 +28,8 @@ Assuming you have [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), you ca
 simply write
 
 ```bash
-cd ~/.oh-my-zsh/plugins/custom
-git clone git@github.com:robbyrussell/oh-my-zsh.git
+cd ~/.oh-my-zsh/custom/plugins
+git clone git@github.com:robertzk/send.zsh.git
 echo "plugins+=(send)" >> ~/.zshrc
 ```
 
