@@ -1,4 +1,36 @@
-My first plugin
+ZSH send plugin
 =====
 
-Hello
+The following zsh plugin enables a really useful git shortcut:
+
+```bash
+send 'my first commit'
+```
+
+will get translated to
+
+```bash
+git add (everything in current git repository)
+git commit -m 'my first commit'
+git pull origin (the current git branch)
+git push origin (the current git branch)
+```
+
+That is, by writing `send`, we are able to add our changes, submit a commit,
+pull from upstream (by default, the remote `origin`) and then push upstream.
+Frequently, developers write out this workflow in full hundreds of times a
+day, so this is a useful time-saving technique.
+
+Installation
+--------
+
+Assuming you have [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), you can
+simply write
+
+```bash
+cd ~/.oh-my-zsh/plugins/custom
+git clone git@github.com:robbyrussell/oh-my-zsh.git
+echo "plugins+=(send)" >> ~/.zshrc
+```
+
+(Alternatively, you can place the `send` plugin in the `plugins=(...)` local manually.)
