@@ -1,6 +1,6 @@
 pull_or_push() {
   git $1 origin `git rev-parse --abbrev-ref HEAD`
-  if [ $# eq 2 ]; then
+  if [ $# -eq 2 ]; then
     git $1 $2 `git rev-parse --abbrev-ref HEAD`
   else
     git $1 origin `git rev-parse --abbrev-ref HEAD`
