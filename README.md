@@ -34,3 +34,9 @@ echo "plugins+=(send)" >> ~/.zshrc
 ```
 
 (Alternatively, you can place the `send` plugin in the `plugins=(...)` local manually.)
+
+If you use the non-recommended alternative, bash, you can install this directly to your `~/.bash_profile`:
+
+```bash
+curl -s https://raw.githubusercontent.com/robertzk/send.zsh/master/send.plugin.zsh >> ~/.bash_profile
+```
