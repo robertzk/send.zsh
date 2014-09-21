@@ -1,0 +1,4 @@
+My first plugin
+=====
+
+Hello
