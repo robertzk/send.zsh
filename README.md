@@ -32,7 +32,7 @@ git clone git@github.com:robertzk/send.zsh.git ~/.oh-my-zsh/custom/plugins/send
 echo "plugins+=(send)" >> ~/.zshrc
 ```
 
-(Alternatively, you can place the `send` plugin in the `plugins=(...)` local manually.)
+(Alternatively, you can place the `send` plugin in the `plugins=(...)` local in your `~/.zshrc` manually.)
 
 If you use the non-recommended alternative, bash, you can install this directly to your `~/.bash_profile`:
 
