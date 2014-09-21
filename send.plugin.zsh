@@ -15,16 +15,14 @@ push() {
 }
 
 send() {
-  echo "$#";
-
-   git add "$(git rev-parse --show-toplevel)"
-   if [ $# -eq 1 ]; then
-     git commit -a -m "$1"
-   else
-     git commit -a -m "I'm too lazy to write a commit message."
-   fi
-   pull
-   push
+  git add "$(git rev-parse --show-toplevel)"
+  if [ $# -eq 1 ]; then
+   git commit -a -m "$1"
+  else
+   git commit -a -m "I'm too lazy to write a commit message."
+  fi
+  pull
+  push
 }
 
 
