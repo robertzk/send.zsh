@@ -1,8 +1,8 @@
 send() {
-  git add .
+  git add "$(git rev-parse --show-toplevel)"
   git commit -a -m "$1"
-  pull
-  push
+  git pull origin master
+  git push origin master 
 }
 
 
