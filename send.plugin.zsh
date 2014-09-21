@@ -1,6 +1,6 @@
 pull_or_push() {
   git $1 origin `git rev-parse --abbrev-ref HEAD`
-  if [ $# -eq 2 ]; then
+  if [ $# -eq 3 ]; then
     git $1 $2 `git rev-parse --abbrev-ref HEAD`
   else
     git $1 origin `git rev-parse --abbrev-ref HEAD`
@@ -17,7 +17,7 @@ push() {
 
 send() {
   git add "$(git rev-parse --show-toplevel)"
-  if [ $# ne 0 ]; then
+  if [ $# -eq 2 ]; then
     git commit -a -m "$1"
   else
     git commit -a -m "I'm too lazy to write a commit message."
