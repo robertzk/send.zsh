@@ -7,7 +7,7 @@ pull_or_push() {
 }
 
 pull() {
-  pull_or_push "pull --rebase" $@
+  pull_or_push "pull" $@
 }
 
 push() {
