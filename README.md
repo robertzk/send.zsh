@@ -1,5 +1,4 @@
-ZSH send plugin
-=====
+# ZSH send plugin
 
 The following zsh plugin enables a really useful git shortcut:
 
@@ -21,18 +20,28 @@ pull from upstream (by default, the remote `origin`) and then push upstream.
 Frequently, developers write out this workflow in full hundreds of times a
 day, so this is a useful time-saving technique.
 
-Installation
---------
+## Installation
 
-Assuming you have [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), you can
-simply write
+### [Antigen](github.com/zsh-users/antigen)
 
-```bash
-git clone git@github.com:robertzk/send.zsh.git ~/.oh-my-zsh/custom/plugins/send
-echo "plugins+=(send)" >> ~/.zshrc
-```
+If you're using [Antigen](github.com/zsh-users/antigen), just add `antigen bundle robertzk/send.zsh`
+to your `.zshrc` file where you're loading your other zsh plugins.
 
-(Alternatively, you can place the `send` plugin in the `plugins=(...)` local in your `~/.zshrc` manually.)
+### Oh-My-Zsh
+
+If you're using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), you can do:
+
+1. `git clone git@github.com:robertzk/send.zsh.git ~/.oh-my-zsh/custom/plugins/send`
+2. `echo "plugins+=(send)" >> ~/.zshrc`
+
+(Alternatively, you can add the `send` plugin to the `plugins=(...)` local in your `~/.zshrc` manually.)
+
+### [Zgen](tarjoilija/zgen)
+
+If you're using [Zgen](tarjoilija/zgen), add `zgen load robertzk/send.zsh`
+to your `.zshrc` file where you're loading your other zsh plugins.
+
+### Bash users
 
 If you use the non-recommended alternative, bash, you can install this directly to your `~/.bash_profile`:
 
