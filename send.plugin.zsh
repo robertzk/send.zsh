@@ -1,17 +1,17 @@
-pull_or_push() {
+pull() {
   if [ $# -eq 2 ]; then
-    git $1 -q $2 `git rev-parse --abbrev-ref HEAD`
+    git pull --rebase -q $2 `git rev-parse --abbrev-ref HEAD`
   else
-    git $1 -q origin `git rev-parse --abbrev-ref HEAD`
+    git pull --rebase -q origin `git rev-parse --abbrev-ref HEAD`
   fi
 }
 
-pull() {
-  pull_or_push "pull" $@
-}
-
 push() {
-  pull_or_push "push" $@ &
+  if [ $# -eq 2 ]; then
+    git push -q $2 `git rev-parse --abbrev-ref HEAD`
+  else
+    git push -q origin `git rev-parse --abbrev-ref HEAD`
+  fi
 }
 
 send() {
