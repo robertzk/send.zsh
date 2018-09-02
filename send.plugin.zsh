@@ -19,10 +19,8 @@ send() {
   if [ $# -eq 1 ]; then
     git commit -a -m "$1"
   else
-    git commit -a -m "I'm too lazy to write a commit message."
+    git commit -a -m "$(git status)"
   fi
   pull
   push
 }
-
-
