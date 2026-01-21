@@ -20,6 +20,24 @@ pull from upstream (by default, the remote `origin`) and then push upstream.
 Frequently, developers write out this workflow in full hundreds of times a
 day, so this is a useful time-saving technique.
 
+## Lock
+
+This plugin also provides a `lock` command for committing specific files:
+
+```bash
+lock file1.txt file2.txt 'my commit message'
+```
+
+will get translated to
+
+```bash
+git add file1.txt file2.txt
+git commit -m 'my commit message'
+```
+
+Unlike `send`, which adds everything and pushes, `lock` gives you precise control
+over which files to stage and commit. The commit message should be the last argument.
+
 ## Installation
 
 ### [Antigen](github.com/zsh-users/antigen)
